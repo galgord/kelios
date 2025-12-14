@@ -35,17 +35,17 @@
 ## Phase 2: Organizer Flow (Events & Money)
 
 ### 2.1 Event Management
-- [ ] **DB:** Update Prisma schema with `Event` model.
-- [ ] **API:** Create `POST /events` (Protected).
-- [ ] **Form:** Build `CreateEventForm` with Zod validation (Title, Date, Price).
-- [ ] **UI:** Build `OrganizerDashboard` listing their events.
+- [x] **DB:** Update Prisma schema with `Event` model.
+- [x] **API:** Create `POST /events` (Protected).
+- [x] **Form:** Build `CreateEventForm` with Zod validation (Title, Date, Price).
+- [x] **UI:** Build `OrganizerDashboard` listing their events.
 - [ ] **CHECKPOINT:** Create an event in UI -> Verify row appears in Supabase `Event` table.
 
 ### 2.2 Stripe Connect (Onboarding)
 - [ ] **Stripe:** Enable Connect in Stripe Dashboard.
-- [ ] **API:** Create endpoint `POST /payments/onboard` (Returns Stripe OAuth link).
+- [x] **API:** Create endpoint `POST /payments/onboard` (Returns Stripe OAuth link).
 - [ ] **API:** Create endpoint `GET /payments/refresh` (Handle incomplete onboarding).
-- [ ] **Frontend:** Add "Setup Payouts" button to Dashboard.
+- [x] **Frontend:** Add "Setup Payouts" button to Dashboard.
 - [ ] **CHECKPOINT:** Click button -> Redirect to Stripe -> Complete onboarding -> Redirect back to App.
 
 ### 🧪 Playwright Verification (Organizer)
