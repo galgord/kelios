@@ -13,6 +13,11 @@ export function MobileShell() {
 
   return (
     <div className="flex h-screen flex-col">
+      {/* Header */}
+      <header className="border-b bg-background px-4 py-4">
+        <h1 className="text-xl font-bold">ConfConnect</h1>
+      </header>
+
       {/* Main content area */}
       <main className="flex-1 overflow-y-auto pb-16">
         <Outlet />

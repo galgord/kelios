@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { MobileShell } from './components/layout/MobileShell';
+import { LoginPage } from './features/auth/pages/LoginPage';
 import { EventsPage } from './features/events/pages/EventsPage';
 import { ScanPage } from './features/scan/pages/ScanPage';
 import { ProfilePage } from './features/profile/pages/ProfilePage';
@@ -7,14 +10,24 @@ import { ProfilePage } from './features/profile/pages/ProfilePage';
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MobileShell />}>
-          <Route index element={<Navigate to="/events" replace />} />
-          <Route path="events" element={<EventsPage />} />
-          <Route path="scan" element={<ScanPage />} />
-          <Route path="profile" element={<ProfilePage />} />
-        </Route>
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <MobileShell />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/events" replace />} />
+            <Route path="events" element={<EventsPage />} />
+            <Route path="scan" element={<ScanPage />} />
+            <Route path="profile" element={<ProfilePage />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
