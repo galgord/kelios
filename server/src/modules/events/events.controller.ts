@@ -9,13 +9,13 @@ export class EventsController {
 
   @Post()
   @UseGuards(JwtAuthGuard)
-  create(@Request() req, @Body() createEventDto: CreateEventDto) {
+  create(@Request() req: any, @Body() createEventDto: CreateEventDto) {
     return this.eventsService.create(req.user.id, createEventDto);
   }
 
   @Get('organizer')
   @UseGuards(JwtAuthGuard)
-  getMyEvents(@Request() req) {
+  getMyEvents(@Request() req: any) {
     return this.eventsService.findByOrganizer(req.user.id);
   }
 }

@@ -8,7 +8,7 @@ export class PaymentsController {
 
   @Post('onboard')
   @UseGuards(JwtAuthGuard)
-  async onboard(@Request() req) {
+  async onboard(@Request() req: any) {
     return this.paymentsService.createConnectAccountLink(
       req.user.id,
       req.user.email,
