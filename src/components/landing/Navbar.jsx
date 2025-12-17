@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,8 +16,11 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F7] border-b border-[#1a1a1a]/10">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
-                <div className="font-serif text-2xl font-bold text-[#1a1a1a] tracking-tight">
-                    Craftsman <span className="text-base font-normal text-[#1a1a1a]/50">by Kelios</span>
+                <div className="flex items-center gap-3">
+                    <img src={logo} alt="Craftsman Logo" className="h-8 w-8 object-contain" />
+                    <div className="font-serif text-2xl font-bold text-[#1a1a1a] tracking-tight">
+                        Craftsman <span className="text-base font-normal text-[#1a1a1a]/50">by Kelios</span>
+                    </div>
                 </div>
 
                 {/* Desktop Nav */}
