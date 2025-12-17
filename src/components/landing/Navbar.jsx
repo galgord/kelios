@@ -42,10 +42,13 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA Button */}
-                <Button 
+                <Button
+                    asChild
                     className="hidden md:flex bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 >
-                    Talk to a Human
+                    <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+                        Talk to a Human
+                    </a>
                 </Button>
 
                 {/* Mobile Menu Button */}
@@ -78,10 +81,13 @@ export default function Navbar() {
                     >
                         Pricing
                     </button>
-                    <Button 
+                    <Button
+                        asChild
                         className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a]"
                     >
-                        Talk to a Human
+                        <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+                            Talk to a Human
+                        </a>
                     </Button>
                 </div>
             )}

@@ -20,17 +20,23 @@ export default function HeroSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button 
+                            <Button
+                                asChild
                                 className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                             >
-                                Get Started
-                                <ArrowRight className="ml-2 h-4 w-4" />
+                                <a href="https://wa.me/5511999957572?text=Hi!%20I%27m%20interested%20in%20getting%20started%20with%20a%20custom%20tool." target="_blank" rel="noopener noreferrer">
+                                    Get Started
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </a>
                             </Button>
-                            <Button 
+                            <Button
+                                asChild
                                 variant="outline"
                                 className="bg-transparent border border-[#1a1a1a] text-[#1a1a1a] font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none hover:bg-[#1a1a1a] hover:text-white transition-all"
                             >
-                                See Examples
+                                <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20see%20some%20examples%20of%20your%20work." target="_blank" rel="noopener noreferrer">
+                                    See Examples
+                                </a>
                             </Button>
                         </div>
 

@@ -10,6 +10,9 @@ export default function FooterSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email) {
+            // Open WhatsApp with the email in the message
+            const message = `Hi! I'm interested in building a custom tool. You can reach me at: ${email}`;
+            window.open(`https://wa.me/5511999957572?text=${encodeURIComponent(message)}`, '_blank');
             setSubmitted(true);
         }
     };
