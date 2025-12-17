@@ -13,7 +13,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F7] border-b border-[#1a1a1a]/10">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F7] border-b border-[#1a1a1a]/10" role="navigation" aria-label="Main navigation">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-3">
@@ -50,15 +50,18 @@ export default function Navbar() {
                     asChild
                     className="hidden md:flex bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 >
-                    <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></span>
                         Talk to a Human
                     </a>
                 </Button>
 
                 {/* Mobile Menu Button */}
-                <button 
+                <button
                     onClick={() => setMobileOpen(!mobileOpen)}
                     className="md:hidden p-2"
+                    aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={mobileOpen}
                 >
                     {mobileOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -89,7 +92,8 @@ export default function Navbar() {
                         asChild
                         className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a]"
                     >
-                        <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></span>
                             Talk to a Human
                         </a>
                     </Button>

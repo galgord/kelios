@@ -3,19 +3,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
+    const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const currentYear = new Date().getFullYear();
+
     return (
-        <section className="min-h-screen bg-[#F9F9F7] pt-24 pb-16 px-6 flex items-center">
+        <section className="min-h-screen bg-[#F9F9F7] pt-24 pb-16 px-6 flex items-center" aria-label="Hero section">
             <div className="max-w-6xl mx-auto w-full">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left - Copy */}
                     <div className="space-y-8">
                         <div className="space-y-6">
                             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] leading-[1.1] tracking-tight">
-                                Digital tools that fit your business.{' '}
-                                <span className="italic text-[#1a1a1a]/60">Not the other way around.</span>
+                                Custom internal tools without the enterprise price.
                             </h1>
                             <p className="text-lg md:text-xl text-[#1a1a1a]/70 leading-relaxed max-w-lg">
-                                We build the simple custom apps you've been dreaming of—from label printers to inventory trackers—without the enterprise price tag.
+                                Stop running your business on spreadsheets. We build the specific software you need to automate workflows and scale—delivered in weeks, not months.
                             </p>
                         </div>
 
@@ -25,7 +27,7 @@ export default function HeroSection() {
                                 className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                             >
                                 <a href="https://wa.me/5511999957572?text=Hi!%20I%27m%20interested%20in%20getting%20started%20with%20a%20custom%20tool." target="_blank" rel="noopener noreferrer">
-                                    Get Started
+                                    Build My Tool
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </a>
                             </Button>
@@ -43,7 +45,7 @@ export default function HeroSection() {
                         {/* Trust Indicators */}
                         <div className="pt-8 border-t border-[#1a1a1a]/10">
                             <p className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 mb-4">
-                                Trusted by real businesses
+                                Powering operations for businesses around the world
                             </p>
                             <div className="flex gap-8 items-center">
                                 <span className="font-serif text-lg text-[#1a1a1a]/40">Rosa's Florals</span>
@@ -85,7 +87,7 @@ export default function HeroSection() {
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="font-mono text-xs text-[#1a1a1a]/50">Date</span>
-                                        <span className="font-mono text-xs text-[#1a1a1a]">Dec 15, 2024</span>
+                                        <span className="font-mono text-xs text-[#1a1a1a]">{currentDate}</span>
                                     </div>
                                 </div>
 
@@ -103,7 +105,7 @@ export default function HeroSection() {
                                             ></div>
                                         ))}
                                     </div>
-                                    <p className="font-mono text-[10px] text-center mt-2 text-[#1a1a1a]/50">KLS-2024-0247</p>
+                                    <p className="font-mono text-[10px] text-center mt-2 text-[#1a1a1a]/50">KLS-{currentYear}-0247</p>
                                 </div>
                             </div>
 

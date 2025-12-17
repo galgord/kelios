@@ -47,7 +47,7 @@ export default function PricingSection() {
 
                                 <div className="p-4 bg-[#EEECE8] border border-[#1a1a1a]/10 mb-8">
                                     <p className="font-mono text-xs text-[#1a1a1a]/70">
-                                        Most small business tools cost <span className="font-bold">$2,500 – $8,000</span> depending on complexity. No hidden fees. No subscriptions.
+                                        Agencies charge $20k+. SaaS subscriptions cost $300/mo forever. Craftsman is different: You pay a flat one-time fee. You own the code. No monthly subscriptions.
                                     </p>
                                 </div>
 
@@ -81,11 +81,6 @@ export default function PricingSection() {
                         </div>
                     </div>
                 </div>
-
-                {/* Money-back note */}
-                <p className="text-center mt-8 font-mono text-xs text-white/40">
-                    Not happy with the design? Full refund before we start building.
-                </p>
             </div>
         </section>
     );
