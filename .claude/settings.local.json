@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__list_directory",
+      "Bash(npm create:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(npm run dev:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: create Vite landing page with Tailwind CSS v4 and React components\n\nSet up a complete Vite project with the landing page components from docs/:\n- Configure Tailwind CSS v4 with @tailwindcss/vite plugin\n- Add path aliases for clean imports (@/ → ./src/)\n- Implement shadcn/ui Button and Input components\n- Copy all landing page sections (Navbar, Hero, BentoGrid, Comparison, Pricing, Footer)\n- Configure custom fonts (Libre Baskerville, JetBrains Mono)\n- Set up responsive design with smooth scrolling navigation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git add:*)"
+    ]
+  }
+}
