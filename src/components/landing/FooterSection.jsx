@@ -66,7 +66,7 @@ export default function FooterSection() {
             <div className="border-t border-[#1a1a1a]/10 py-8 px-6">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="font-serif text-xl font-bold text-[#1a1a1a]">
-                        Kelios
+                        Craftsman <span className="text-sm font-normal text-[#1a1a1a]/50">by Kelios</span>
                     </div>
                     
                     <div className="flex gap-8">
@@ -79,7 +79,7 @@ export default function FooterSection() {
                     </div>
                     
                     <p className="font-mono text-xs text-[#1a1a1a]/40">
-                        © 2024 Kelios. Built with care.
+                        © 2024 Craftsman by Kelios. Built with care.
                     </p>
                 </div>
             </div>

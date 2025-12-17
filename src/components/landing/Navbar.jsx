@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div className="font-serif text-2xl font-bold text-[#1a1a1a] tracking-tight">
-                    Kelios
+                    Craftsman <span className="text-base font-normal text-[#1a1a1a]/50">by Kelios</span>
                 </div>
 
                 {/* Desktop Nav */}

@@ -1,4 +1,4 @@
-# Kelios Landing Page
+# Craftsman by Kelios
 
 A modern, responsive landing page built with React, Vite, and Tailwind CSS v4. Features a clean design showcasing custom business tools and services.
 
