@@ -102,6 +102,41 @@ export default defineConfig({
 })
 ```
 
+## Deployment
+
+### Deploy to Vercel
+
+This project is configured for easy deployment to Vercel:
+
+#### Option 1: Deploy via Vercel Dashboard (Recommended)
+
+1. Push your code to GitHub
+2. Visit [vercel.com](https://vercel.com)
+3. Click "Add New" → "Project"
+4. Import your GitHub repository
+5. Vercel will auto-detect the Vite framework
+6. Click "Deploy"
+
+#### Option 2: Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to production
+vercel --prod
+```
+
+#### Configuration Files
+
+- `vercel.json` - Vercel deployment configuration
+- `.vercelignore` - Files to exclude from deployment
+
+The project includes optimized Vercel configuration for Vite builds with proper SPA routing support.
+
 ## License
 
 MIT
