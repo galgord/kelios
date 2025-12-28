@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail, MessageSquareText } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 export default function Navbar() {
@@ -37,24 +37,31 @@ export default function Navbar() {
                     >
                         Process
                     </button>
-                    <button 
-                        onClick={() => scrollTo('pricing')}
-                        className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/70 hover:text-[#1a1a1a] transition-colors"
-                    >
-                        Pricing
-                    </button>
                 </div>
 
                 {/* CTA Button */}
-                <Button
-                    asChild
-                    className="hidden md:flex bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-                >
-                    <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></span>
-                        Talk to a Human
-                    </a>
-                </Button>
+                <div className="hidden md:flex items-center gap-3">
+                    <Button
+                        asChild
+                        className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                    >
+                        <a href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center">
+                            <Mail className="mr-2 h-4 w-4" />
+                            Email Us
+                        </a>
+                    </Button>
+
+                    <Button
+                        asChild
+                        variant="outline"
+                        className="bg-transparent border border-[#1a1a1a] text-[#1a1a1a] font-mono text-xs uppercase tracking-wider px-5 py-5 rounded-none hover:bg-[#1a1a1a] hover:text-white transition-all"
+                    >
+                        <a href="sms:+5511999957572" className="flex items-center">
+                            <MessageSquareText className="mr-2 h-4 w-4" />
+                            Text Us
+                        </a>
+                    </Button>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -82,19 +89,24 @@ export default function Navbar() {
                     >
                         Process
                     </button>
-                    <button 
-                        onClick={() => scrollTo('pricing')}
-                        className="block font-mono text-sm uppercase tracking-widest text-[#1a1a1a]/70"
-                    >
-                        Pricing
-                    </button>
                     <Button
                         asChild
                         className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a]"
                     >
-                        <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20talk%20about%20building%20a%20custom%20tool%20for%20my%20business." target="_blank" rel="noopener noreferrer" className="flex items-center">
-                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></span>
-                            Talk to a Human
+                        <a href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
+                            <Mail className="mr-2 h-4 w-4" />
+                            Email Us
+                        </a>
+                    </Button>
+
+                    <Button
+                        asChild
+                        variant="outline"
+                        className="w-full bg-transparent border border-[#1a1a1a] text-[#1a1a1a] font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none"
+                    >
+                        <a href="sms:+5511999957572" className="flex items-center justify-center">
+                            <MessageSquareText className="mr-2 h-4 w-4" />
+                            Text Us
                         </a>
                     </Button>
                 </div>

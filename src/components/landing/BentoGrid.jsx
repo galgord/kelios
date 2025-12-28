@@ -43,7 +43,7 @@ const ServiceCard = ({ icon: Icon, title, description, size = 'normal', accent =
 
 export default function BentoGrid() {
     return (
-        <section id="services" className="bg-[#EEECE8] py-24 px-6">
+        <section id="services" className="bg-[#EEECE8] py-28 md:py-32 px-6">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-16 max-w-2xl">
@@ -108,7 +108,13 @@ export default function BentoGrid() {
                 {/* Bottom Note */}
                 <div className="mt-12 text-center">
                     <p className="font-mono text-sm text-[#1a1a1a]/50">
-                        Don't see what you need? <span className="text-[#FF6B35] underline cursor-pointer">We build custom.</span>
+                        Don't see what you need?{" "}
+                        <a
+                            href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                            className="text-[#FF6B35] underline underline-offset-4 hover:no-underline"
+                        >
+                            Email us your wishlist.
+                        </a>
                     </p>
                 </div>
             </div>

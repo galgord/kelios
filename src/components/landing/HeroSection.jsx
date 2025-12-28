@@ -1,23 +1,27 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, MessageSquareText } from 'lucide-react';
 
 export default function HeroSection() {
     const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     const currentYear = new Date().getFullYear();
+    const barcodeWidths = React.useMemo(
+        () => Array.from({ length: 32 }, (_, i) => (((i * 7) % 11) > 5 ? '3px' : '2px')),
+        []
+    );
 
     return (
-        <section className="min-h-screen bg-[#F9F9F7] pt-24 pb-16 px-6 flex items-center" aria-label="Hero section">
+        <section className="min-h-screen bg-[#F9F9F7] pt-28 pb-20 px-6 flex items-center" aria-label="Hero section">
             <div className="max-w-6xl mx-auto w-full">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left - Copy */}
                     <div className="space-y-8">
                         <div className="space-y-6">
                             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] leading-[1.1] tracking-tight">
-                                Custom internal tools without the enterprise price.
+                                Custom internal tools built for speed and scale.
                             </h1>
                             <p className="text-lg md:text-xl text-[#1a1a1a]/70 leading-relaxed max-w-lg">
-                                Stop running your business on spreadsheets. We build the specific software you need to automate workflows and scale—delivered in weeks, not months.
+                                Stop running operations manually. We build the exact software your team needs to automate workflows and move faster.
                             </p>
                         </div>
 
@@ -26,8 +30,9 @@ export default function HeroSection() {
                                 asChild
                                 className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                             >
-                                <a href="https://wa.me/5511999957572?text=Hi!%20I%27m%20interested%20in%20getting%20started%20with%20a%20custom%20tool." target="_blank" rel="noopener noreferrer">
-                                    Build My Tool
+                                <a href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
+                                    <Mail className="mr-2 h-4 w-4" />
+                                    Email Us
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </a>
                             </Button>
@@ -36,24 +41,14 @@ export default function HeroSection() {
                                 variant="outline"
                                 className="bg-transparent border border-[#1a1a1a] text-[#1a1a1a] font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none hover:bg-[#1a1a1a] hover:text-white transition-all"
                             >
-                                <a href="https://wa.me/5511999957572?text=Hi!%20I%27d%20like%20to%20see%20some%20examples%20of%20your%20work." target="_blank" rel="noopener noreferrer">
-                                    See Examples
+                                <a href="sms:+5511999957572" className="flex items-center justify-center">
+                                    <MessageSquareText className="mr-2 h-4 w-4" />
+                                    Text Us
                                 </a>
                             </Button>
                         </div>
 
-                        {/* Trust Indicators */}
-                        <div className="pt-8 border-t border-[#1a1a1a]/10">
-                            <p className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 mb-4">
-                                Powering operations for businesses around the world
-                            </p>
-                            <div className="flex gap-8 items-center">
-                                <span className="font-serif text-lg text-[#1a1a1a]/40">Rosa's Florals</span>
-                                <span className="font-serif text-lg text-[#1a1a1a]/40">Mike's Auto</span>
-                                <span className="font-serif text-lg text-[#1a1a1a]/40">Daily Bread</span>
-                            </div>
                         </div>
-                    </div>
 
                     {/* Right - Visual UI Cards */}
                     <div className="relative flex justify-center lg:justify-end">
@@ -94,12 +89,12 @@ export default function HeroSection() {
                                 {/* Barcode simulation */}
                                 <div className="mt-6 pt-4 border-t border-[#1a1a1a]/20">
                                     <div className="flex gap-[2px] justify-center">
-                                        {[...Array(32)].map((_, i) => (
+                                        {barcodeWidths.map((width, i) => (
                                             <div 
                                                 key={i} 
                                                 className="bg-[#1a1a1a]" 
                                                 style={{ 
-                                                    width: Math.random() > 0.5 ? '2px' : '3px',
+                                                    width,
                                                     height: '24px'
                                                 }}
                                             ></div>

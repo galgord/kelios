@@ -17,7 +17,7 @@ const ComparisonItem = ({ icon: Icon, text, isGood }) => (
 
 export default function ComparisonSection() {
     return (
-        <section id="process" className="bg-[#F9F9F7] py-24 px-6">
+        <section id="process" className="bg-[#F9F9F7] py-28 md:py-32 px-6">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -64,12 +64,12 @@ export default function ComparisonSection() {
                     {/* The Kelios Way */}
                     <div className="relative">
                         <div className="absolute -top-3 left-6 px-3 py-1 bg-[#FF6B35] border border-[#1a1a1a]">
-                            <span className="font-mono text-[10px] uppercase tracking-widest text-white">The Kelios Way</span>
+                            <span className="font-mono text-[10px] uppercase tracking-widest text-white">The Craftsman Way</span>
                         </div>
                         <div className="bg-white border-2 border-[#1a1a1a] p-8 pt-10 shadow-[6px_6px_0px_0px_#1a1a1a]">
                             <ComparisonItem 
                                 icon={LayoutDashboard} 
-                                text="One simple dashboard for everything" 
+                                text="Software designed around your workflow" 
                                 isGood={true} 
                             />
                             <ComparisonItem 

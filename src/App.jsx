@@ -1,10 +1,24 @@
 import React from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import BentoGrid from '@/components/landing/BentoGrid';
 import ComparisonSection from '@/components/landing/ComparisonSection';
-import PricingSection from '@/components/landing/PricingSection';
 import FooterSection from '@/components/landing/FooterSection';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import TermsAndAgreements from '@/pages/TermsAndAgreements';
+
+function LandingPage() {
+    return (
+        <>
+            <Navbar />
+            <HeroSection />
+            <BentoGrid />
+            <ComparisonSection />
+            <FooterSection />
+        </>
+    );
+}
 
 export default function App() {
     return (
@@ -31,13 +45,12 @@ export default function App() {
                     }
                 `}
             </style>
-
-            <Navbar />
-            <HeroSection />
-            <BentoGrid />
-            <ComparisonSection />
-            <PricingSection />
-            <FooterSection />
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsAndAgreements />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
         </div>
     );
 }

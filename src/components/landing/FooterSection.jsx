@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 export default function FooterSection() {
@@ -32,10 +33,10 @@ export default function FooterSection() {
             if (response.ok) {
                 setSubmitted(true);
             } else {
-                alert('There was an issue submitting your email. Please try again or contact us directly via WhatsApp.');
+                alert('There was an issue submitting your email. Please try again, or contact us directly via email or text.');
             }
         } catch (error) {
-            alert('There was an issue submitting your email. Please try again or contact us directly via WhatsApp.');
+            alert('There was an issue submitting your email. Please try again, or contact us directly via email or text.');
         } finally {
             setIsSubmitting(false);
         }
@@ -77,6 +78,22 @@ export default function FooterSection() {
                                     {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
                                 </Button>
                             </div>
+
+                            <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <a
+                                    href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                                    className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors"
+                                >
+                                    Prefer email? Email us
+                                </a>
+                                <span className="hidden sm:inline text-[#1a1a1a]/20">•</span>
+                                <a
+                                    href="sms:+5511999957572"
+                                    className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors"
+                                >
+                                    Prefer text? Text us
+                                </a>
+                            </div>
                         </form>
                     ) : (
                         <div className="bg-[#E8F5E9] border border-green-300 p-6 max-w-md mx-auto">
@@ -86,6 +103,21 @@ export default function FooterSection() {
                             <p className="font-mono text-xs text-green-700 mt-2">
                                 Check your inbox for a confirmation.
                             </p>
+                            <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <a
+                                    href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                                    className="font-mono text-xs uppercase tracking-widest text-green-800/70 hover:text-green-900 transition-colors"
+                                >
+                                    Email us
+                                </a>
+                                <span className="hidden sm:inline text-green-800/20">•</span>
+                                <a
+                                    href="sms:+5511999957572"
+                                    className="font-mono text-xs uppercase tracking-widest text-green-800/70 hover:text-green-900 transition-colors"
+                                >
+                                    Text us
+                                </a>
+                            </div>
                         </div>
                     )}
                 </div>
@@ -102,12 +134,12 @@ export default function FooterSection() {
                     </div>
                     
                     <div className="flex gap-8">
-                        <a href="#" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
+                        <Link to="/privacy" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
                             Privacy
-                        </a>
-                        <a href="#" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
+                        </Link>
+                        <Link to="/terms" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
                             Terms
-                        </a>
+                        </Link>
                     </div>
                     
                     <p className="font-mono text-xs text-[#1a1a1a]/40">
