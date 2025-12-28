@@ -37,6 +37,12 @@ export default function Navbar() {
                     >
                         Process
                     </button>
+                    <button 
+                        onClick={() => scrollTo('blog')}
+                        className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/70 hover:text-[#1a1a1a] transition-colors"
+                    >
+                        Insights
+                    </button>
                 </div>
 
                 {/* CTA Button */}
@@ -88,6 +94,12 @@ export default function Navbar() {
                         className="block font-mono text-sm uppercase tracking-widest text-[#1a1a1a]/70"
                     >
                         Process
+                    </button>
+                    <button 
+                        onClick={() => scrollTo('blog')}
+                        className="block font-mono text-sm uppercase tracking-widest text-[#1a1a1a]/70"
+                    >
+                        Insights
                     </button>
                     <Button
                         asChild
