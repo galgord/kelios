@@ -48,10 +48,10 @@ export default function FooterSection() {
             <div className="py-24 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] leading-tight mb-6">
-                        Streamline your operations today.
+                        Let's solve your problem.
                     </h2>
                     <p className="font-mono text-sm text-[#1a1a1a]/60 mb-10 max-w-md mx-auto">
-                        Drop your email. We'll reach out within 24 hours to chat about what you need.
+                        Drop your email and tell us what's not working. We'll reach out within 24 hours.
                     </p>
 
                     {!submitted ? (

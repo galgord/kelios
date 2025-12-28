@@ -1,0 +1,10 @@
+# robots.txt for craftsman.kelios.io
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://craftsman.kelios.io/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
+

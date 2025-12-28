@@ -18,10 +18,10 @@ export default function HeroSection() {
                     <div className="space-y-8">
                         <div className="space-y-6">
                             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] leading-[1.1] tracking-tight">
-                                Custom internal tools built for speed and scale.
+                                We build the software your business actually needs.
                             </h1>
                             <p className="text-lg md:text-xl text-[#1a1a1a]/70 leading-relaxed max-w-lg">
-                                Stop running operations manually. We build the exact software your team needs to automate workflows and move faster.
+                                Tell us what's slowing you down. We'll build a custom tool that solves your specific problem—delivered in weeks, not months.
                             </p>
                         </div>
 

@@ -22,6 +22,115 @@ function parseMarkdown(content) {
         .replace(/<p>\s*<\/p>/g, '');
 }
 
+// SEO Helper: Update meta tags dynamically
+function updateMetaTags(post, slug) {
+    const baseUrl = 'https://craftsman.kelios.io';
+    const postUrl = `${baseUrl}/blog/${slug}`;
+    
+    // Update title
+    document.title = `${post.title} | Craftsman by Kelios`;
+    
+    // Helper to set meta tag
+    const setMeta = (property, content, isProperty = false) => {
+        const attr = isProperty ? 'property' : 'name';
+        let meta = document.querySelector(`meta[${attr}="${property}"]`);
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.setAttribute(attr, property);
+            document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+    };
+    
+    // Update meta description
+    setMeta('description', post.excerpt);
+    setMeta('title', post.title);
+    
+    // Update Open Graph
+    setMeta('og:title', post.title, true);
+    setMeta('og:description', post.excerpt, true);
+    setMeta('og:url', postUrl, true);
+    setMeta('og:type', 'article', true);
+    setMeta('og:site_name', 'Craftsman by Kelios', true);
+    
+    // Update Twitter
+    setMeta('twitter:title', post.title, true);
+    setMeta('twitter:description', post.excerpt, true);
+    setMeta('twitter:url', postUrl, true);
+    
+    // Update canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', postUrl);
+    
+    // Add JSON-LD structured data
+    let jsonLd = document.querySelector('script[data-blog-post-ld]');
+    if (!jsonLd) {
+        jsonLd = document.createElement('script');
+        jsonLd.setAttribute('type', 'application/ld+json');
+        jsonLd.setAttribute('data-blog-post-ld', 'true');
+        document.head.appendChild(jsonLd);
+    }
+    
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": {
+            "@type": "Organization",
+            "name": post.author || "Kelios Team"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Craftsman by Kelios",
+            "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/logo.png`
+            }
+        },
+        "datePublished": post.published_at,
+        "dateModified": post.published_at,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": postUrl
+        },
+        "url": postUrl,
+        "articleSection": post.category,
+        "wordCount": post.content ? post.content.split(/\s+/).length : 0
+    };
+    
+    jsonLd.textContent = JSON.stringify(structuredData);
+}
+
+// Cleanup meta tags when leaving
+function resetMetaTags() {
+    document.title = 'Craftsman by Kelios - Custom Business Tools';
+    
+    const setMeta = (property, content, isProperty = false) => {
+        const attr = isProperty ? 'property' : 'name';
+        const meta = document.querySelector(`meta[${attr}="${property}"]`);
+        if (meta) meta.setAttribute('content', content);
+    };
+    
+    const defaultDesc = 'We build the software your business actually needs. Custom internal tools that solve your specific problems—delivered in weeks, not months.';
+    setMeta('description', defaultDesc);
+    setMeta('og:description', defaultDesc, true);
+    setMeta('og:title', 'Craftsman by Kelios - Custom Business Tools', true);
+    setMeta('og:url', 'https://craftsman.kelios.io/', true);
+    setMeta('og:type', 'website', true);
+    
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://craftsman.kelios.io/');
+    
+    const jsonLd = document.querySelector('script[data-blog-post-ld]');
+    if (jsonLd) jsonLd.remove();
+}
+
 export default function BlogPost() {
     const { slug } = useParams();
     const [post, setPost] = useState(null);
@@ -52,7 +161,17 @@ export default function BlogPost() {
         }
 
         fetchPost();
+        
+        // Cleanup on unmount
+        return () => resetMetaTags();
     }, [slug]);
+
+    // Update SEO when post loads
+    useEffect(() => {
+        if (post) {
+            updateMetaTags(post, slug);
+        }
+    }, [post, slug]);
 
     if (loading) {
         return (
@@ -156,10 +275,10 @@ export default function BlogPost() {
                     {/* CTA Box */}
                     <div className="mt-16 p-8 bg-white border border-[#1a1a1a] shadow-[6px_6px_0px_0px_#FF6B35]">
                         <h3 className="font-serif text-2xl text-[#1a1a1a] mb-4">
-                            Ready to build your custom tool?
+                            Have a problem that needs solving?
                         </h3>
                         <p className="font-mono text-sm text-[#1a1a1a]/60 mb-6">
-                            Let's talk about what's slowing down your operations and how we can fix it.
+                            Tell us what's not working. We'll figure out if we can help.
                         </p>
                         <a 
                             href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"

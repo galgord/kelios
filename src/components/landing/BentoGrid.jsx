@@ -48,13 +48,13 @@ export default function BentoGrid() {
                 {/* Section Header */}
                 <div className="mb-16 max-w-2xl">
                     <p className="font-mono text-xs uppercase tracking-widest text-[#FF6B35] mb-4">
-                        What We Build
+                        Problems We Solve
                     </p>
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] leading-tight mb-4">
-                        Simple tools for real work
+                        Tools shaped around your workflow
                     </h2>
                     <p className="text-lg text-[#1a1a1a]/60">
-                        No bloated features. No confusing menus. Just the tools you actually need.
+                        Every business is different. Tell us what's broken—we'll build exactly what you need.
                     </p>
                 </div>
 
@@ -108,12 +108,12 @@ export default function BentoGrid() {
                 {/* Bottom Note */}
                 <div className="mt-12 text-center">
                     <p className="font-mono text-sm text-[#1a1a1a]/50">
-                        Don't see what you need?{" "}
+                        Have a different problem?{" "}
                         <a
                             href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
                             className="text-[#FF6B35] underline underline-offset-4 hover:no-underline"
                         >
-                            Email us your wishlist.
+                            Tell us about it.
                         </a>
                     </p>
                 </div>
