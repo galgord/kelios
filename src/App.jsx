@@ -4,9 +4,11 @@ import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import BentoGrid from '@/components/landing/BentoGrid';
 import ComparisonSection from '@/components/landing/ComparisonSection';
+import BlogSection from '@/components/landing/BlogSection';
 import FooterSection from '@/components/landing/FooterSection';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import TermsAndAgreements from '@/pages/TermsAndAgreements';
+import BlogPost from '@/pages/BlogPost';
 
 function LandingPage() {
     return (
@@ -15,6 +17,7 @@ function LandingPage() {
             <HeroSection />
             <BentoGrid />
             <ComparisonSection />
+            <BlogSection />
             <FooterSection />
         </>
     );
@@ -47,6 +50,7 @@ export default function App() {
             </style>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<TermsAndAgreements />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
