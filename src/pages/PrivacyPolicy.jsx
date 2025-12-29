@@ -115,10 +115,10 @@ export default function PrivacyPolicy() {
                             <p className="text-[#1a1a1a]/70 leading-relaxed">
                                 Questions about this policy? Email us at{' '}
                                 <a
-                                    href="mailto:hello@craftsman.kelios.io?subject=Privacy%20policy%20question"
+                                    href="mailto:info@kelios.io?subject=Privacy%20policy%20question"
                                     className="text-[#FF6B35] underline underline-offset-4 hover:no-underline"
                                 >
-                                    hello@craftsman.kelios.io
+                                    info@kelios.io
                                 </a>
                                 .
                             </p>

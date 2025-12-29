@@ -81,7 +81,7 @@ export default function FooterSection() {
 
                             <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <a
-                                    href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                                    href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project"
                                     className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors"
                                 >
                                     Prefer email? Email us
@@ -105,7 +105,7 @@ export default function FooterSection() {
                             </p>
                             <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <a
-                                    href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                                    href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project"
                                     className="font-mono text-xs uppercase tracking-widest text-green-800/70 hover:text-green-900 transition-colors"
                                 >
                                     Email us

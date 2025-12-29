@@ -58,7 +58,7 @@ export default function Navbar() {
                         asChild
                         className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                     >
-                        <a href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center">
+                        <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center">
                             <Mail className="mr-2 h-4 w-4" />
                             Email Us
                         </a>
@@ -119,7 +119,7 @@ export default function Navbar() {
                         asChild
                         className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a]"
                     >
-                        <a href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
+                        <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
                             <Mail className="mr-2 h-4 w-4" />
                             Email Us
                         </a>

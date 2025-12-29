@@ -110,7 +110,7 @@ export default function BentoGrid() {
                     <p className="font-mono text-sm text-[#1a1a1a]/50">
                         Have a different problem?{" "}
                         <a
-                            href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                            href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project"
                             className="text-[#FF6B35] underline underline-offset-4 hover:no-underline"
                         >
                             Tell us about it.

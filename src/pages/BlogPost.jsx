@@ -281,7 +281,7 @@ export default function BlogPost() {
                             Tell us what's not working. We'll figure out if we can help.
                         </p>
                         <a 
-                            href="mailto:hello@craftsman.kelios.io?subject=Custom%20internal%20tool%20project"
+                            href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project"
                             className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider text-[#FF6B35] hover:underline underline-offset-4"
                         >
                             Get in touch

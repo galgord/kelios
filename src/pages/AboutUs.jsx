@@ -147,7 +147,7 @@ export default function AboutUs() {
                                 Tell us what's not working. We'll have a real conversation no sales pitch, just problem-solving.
                             </p>
                             <a 
-                                href="mailto:hello@craftsman.kelios.io?subject=Let's%20work%20together"
+                                href="mailto:info@kelios.io?subject=Let's%20work%20together"
                                 className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-4 shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                             >
                                 Say Hello

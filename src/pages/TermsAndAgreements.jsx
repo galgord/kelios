@@ -113,10 +113,10 @@ export default function TermsAndAgreements() {
                             <p className="text-[#1a1a1a]/70 leading-relaxed">
                                 Questions? Email{' '}
                                 <a
-                                    href="mailto:hello@craftsman.kelios.io?subject=Terms%20question"
+                                    href="mailto:info@kelios.io?subject=Terms%20question"
                                     className="text-[#FF6B35] underline underline-offset-4 hover:no-underline"
                                 >
-                                    hello@craftsman.kelios.io
+                                    info@kelios.io
                                 </a>
                                 .
                             </p>
