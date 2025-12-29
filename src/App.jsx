@@ -9,6 +9,7 @@ import FooterSection from '@/components/landing/FooterSection';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import TermsAndAgreements from '@/pages/TermsAndAgreements';
 import BlogPost from '@/pages/BlogPost';
+import AboutUs from '@/pages/AboutUs';
 
 function LandingPage() {
     return (
@@ -50,6 +51,7 @@ export default function App() {
             </style>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/about" element={<AboutUs />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<TermsAndAgreements />} />

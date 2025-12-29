@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Mail, MessageSquareText } from 'lucide-react';
 import logo from '@/assets/logo.png';
@@ -43,6 +44,12 @@ export default function Navbar() {
                     >
                         Insights
                     </button>
+                    <Link 
+                        to="/about"
+                        className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/70 hover:text-[#1a1a1a] transition-colors"
+                    >
+                        About
+                    </Link>
                 </div>
 
                 {/* CTA Button */}
@@ -101,6 +108,13 @@ export default function Navbar() {
                     >
                         Insights
                     </button>
+                    <Link 
+                        to="/about"
+                        onClick={() => setMobileOpen(false)}
+                        className="block font-mono text-sm uppercase tracking-widest text-[#1a1a1a]/70"
+                    >
+                        About
+                    </Link>
                     <Button
                         asChild
                         className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-xs uppercase tracking-wider px-6 py-5 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a]"

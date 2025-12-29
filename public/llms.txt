@@ -1,0 +1,53 @@
+# Craftsman by Kelios
+
+> We build the software your business actually needs. Custom internal tools that solve your specific problems delivered in weeks, not months.
+
+## About Us
+
+Craftsman by Kelios is a custom software development company founded by Gal Gordon and Roger Fuentes two mobile engineers with 25 years of combined experience in tech. We previously worked together and noticed that businesses were using AI and no-code tools to get 90% of the way there but couldn't cross the finish line. So we started Craftsman to help businesses get to 100%.
+
+We've built software for luxury real estate tech, sports tech, and fintech. We're based in Latin America and work with businesses across the Americas and beyond.
+
+Our philosophy: Too many people stick to what they know because they're scared to let technology make their lives easier. We're here to change that.
+
+## What We Do
+
+- Build custom internal tools and business software
+- Solve workflow automation problems
+- Create inventory management systems
+- Develop order management solutions
+- Build client portals and dashboards
+- Design label printing and barcode systems
+- Optimize delivery and route planning
+
+## How We Work
+
+1. **We Listen** - Tell us about your daily headaches. We take notes.
+2. **We Build** - We craft a tool that fits like a glove. No bloat.
+3. **You Work** - Start using it. We stick around to help.
+
+## Why Choose Us
+
+- Software designed around YOUR workflow, not the other way around
+- Custom built for your exact needs
+- One-time setup, yours forever (no recurring subscription)
+- Delivered in weeks, not months
+- No bloated features you'll never use
+
+## Contact
+
+- Email: hello@craftsman.kelios.io
+- Website: https://craftsman.kelios.io
+
+## Content
+
+Our blog covers topics including:
+- Internal tools and custom software
+- Workflow automation for small business
+- Inventory management best practices
+- Order management systems
+- Digital transformation strategies
+- Buy vs build decisions for software
+
+For our full blog, visit: https://craftsman.kelios.io/#blog
+

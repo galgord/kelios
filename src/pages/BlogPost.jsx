@@ -117,7 +117,7 @@ function resetMetaTags() {
         if (meta) meta.setAttribute('content', content);
     };
     
-    const defaultDesc = 'We build the software your business actually needs. Custom internal tools that solve your specific problems—delivered in weeks, not months.';
+    const defaultDesc = 'We build the software your business actually needs. Custom internal tools that solve your specific problems delivered in weeks, not months.';
     setMeta('description', defaultDesc);
     setMeta('og:description', defaultDesc, true);
     setMeta('og:title', 'Craftsman by Kelios - Custom Business Tools', true);

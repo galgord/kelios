@@ -21,7 +21,7 @@ export default function HeroSection() {
                                 We build the software your business actually needs.
                             </h1>
                             <p className="text-lg md:text-xl text-[#1a1a1a]/70 leading-relaxed max-w-lg">
-                                Tell us what's slowing you down. We'll build a custom tool that solves your specific problem—delivered in weeks, not months.
+                                Tell us what's slowing you down. We'll build a custom tool that solves your specific problem delivered in weeks, not months.
                             </p>
                         </div>
 

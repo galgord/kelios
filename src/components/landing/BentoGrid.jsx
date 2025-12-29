@@ -54,7 +54,7 @@ export default function BentoGrid() {
                         Tools shaped around your workflow
                     </h2>
                     <p className="text-lg text-[#1a1a1a]/60">
-                        Every business is different. Tell us what's broken—we'll build exactly what you need.
+                        Every business is different. Tell us what's broken we'll build exactly what you need.
                     </p>
                 </div>
 

@@ -5,6 +5,28 @@ Allow: /
 # Sitemap
 Sitemap: https://craftsman.kelios.io/sitemap.xml
 
+# LLM-specific content
+# See https://craftsman.kelios.io/llms.txt for AI-friendly site summary
+
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
 

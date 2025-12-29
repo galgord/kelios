@@ -134,6 +134,9 @@ export default function FooterSection() {
                     </div>
                     
                     <div className="flex gap-8">
+                        <Link to="/about" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
+                            About
+                        </Link>
                         <Link to="/privacy" className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 hover:text-[#1a1a1a] transition-colors">
                             Privacy
                         </Link>
