@@ -1,28 +1,47 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Mail, MessageSquareText } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const isHomePage = location.pathname === '/';
+
+    // Handle scrolling to section when navigating from another page
+    useEffect(() => {
+        if (isHomePage && location.hash) {
+            const id = location.hash.slice(1);
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }, [isHomePage, location.hash]);
 
     const scrollTo = (id) => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
         setMobileOpen(false);
+        if (isHomePage) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate(`/#${id}`);
+        }
     };
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F7] border-b border-[#1a1a1a]/10" role="navigation" aria-label="Main navigation">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-3">
+                <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                     <img src={logo} alt="Craftsman Logo" className="h-12 w-12 object-contain" />
                     <div className="font-serif text-2xl font-bold text-[#1a1a1a] tracking-tight">
                         Craftsman <span className="text-base font-normal text-[#1a1a1a]/50">by Kelios</span>
                     </div>
-                </div>
+                </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">

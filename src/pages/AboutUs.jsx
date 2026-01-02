@@ -89,7 +89,7 @@ export default function AboutUs() {
                                 <span className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50">Background</span>
                             </div>
                             <p className="font-mono text-sm text-[#1a1a1a]/70 leading-relaxed">
-                                We've built software for <strong className="text-[#1a1a1a]">luxury real estate tech</strong>, <strong className="text-[#1a1a1a]">sports tech</strong>, and <strong className="text-[#1a1a1a]">fintech</strong>. From native mobile apps to full-stack web platforms, we've seen what works and what doesn't.
+                                We've built software for <strong className="text-[#1a1a1a]">everyone</strong>. From native mobile apps to full-stack web platforms, we've seen what works and what doesn't.
                             </p>
                         </div>
 
