@@ -3,10 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackFormSubmit } from '@/lib/analytics';
 import logo from '@/assets/logo.png';
 
 export default function FooterSection() {
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const currentYear = new Date().getFullYear();
@@ -26,12 +28,13 @@ export default function FooterSection() {
                 },
                 body: JSON.stringify({
                     email: email,
-                    message: 'Lead from Craftsman landing page',
+                    message: message || 'Lead from Craftsman landing page',
                 }),
             });
 
             if (response.ok) {
                 setSubmitted(true);
+                trackFormSubmit('footer_email');
             } else {
                 alert('There was an issue submitting your email. Please try again, or contact us directly via email or text.');
             }
@@ -56,8 +59,8 @@ export default function FooterSection() {
 
                     {!submitted ? (
                         <form onSubmit={handleSubmit} className="max-w-md mx-auto" aria-label="Contact form">
-                            <div className="flex flex-col sm:flex-row gap-3">
-                                <div className="relative flex-1">
+                            <div className="space-y-3">
+                                <div className="relative">
                                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#1a1a1a]/30" aria-hidden="true" />
                                     <Input
                                         type="email"
@@ -69,10 +72,18 @@ export default function FooterSection() {
                                         aria-label="Email address"
                                     />
                                 </div>
+                                <textarea
+                                    placeholder="What's not working? (optional)"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    rows={3}
+                                    className="w-full px-4 py-3 rounded-none border border-[#1a1a1a] bg-white font-mono text-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:ring-offset-0 resize-none"
+                                    aria-label="Describe your problem"
+                                />
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? 'Connecting...' : "Let's Talk"}
                                     {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}

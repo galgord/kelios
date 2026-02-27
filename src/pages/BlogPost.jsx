@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+import { trackBlogView } from '@/lib/analytics';
 import Navbar from '@/components/landing/Navbar';
 import FooterSection from '@/components/landing/FooterSection';
 
@@ -109,7 +110,7 @@ function updateMetaTags(post, slug) {
 
 // Cleanup meta tags when leaving
 function resetMetaTags() {
-    document.title = 'Craftsman by Kelios - Custom Business Tools';
+    document.title = 'Custom Internal Tools for Small Business | Craftsman by Kelios';
     
     const setMeta = (property, content, isProperty = false) => {
         const attr = isProperty ? 'property' : 'name';
@@ -120,7 +121,7 @@ function resetMetaTags() {
     const defaultDesc = 'We build the software your business actually needs. Custom internal tools that solve your specific problems delivered in weeks, not months.';
     setMeta('description', defaultDesc);
     setMeta('og:description', defaultDesc, true);
-    setMeta('og:title', 'Craftsman by Kelios - Custom Business Tools', true);
+    setMeta('og:title', 'Custom Internal Tools for Small Business | Craftsman by Kelios', true);
     setMeta('og:url', 'https://craftsman.kelios.io/', true);
     setMeta('og:type', 'website', true);
     
@@ -166,10 +167,11 @@ export default function BlogPost() {
         return () => resetMetaTags();
     }, [slug]);
 
-    // Update SEO when post loads
+    // Update SEO and track view when post loads
     useEffect(() => {
         if (post) {
             updateMetaTags(post, slug);
+            trackBlogView(slug, post.category);
         }
     }, [post, slug]);
 

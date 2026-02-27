@@ -4,6 +4,7 @@ import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import BentoGrid from '@/components/landing/BentoGrid';
 import ComparisonSection from '@/components/landing/ComparisonSection';
+import WhyUsSection from '@/components/landing/PricingSection';
 import BlogSection from '@/components/landing/BlogSection';
 import FooterSection from '@/components/landing/FooterSection';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
@@ -18,6 +19,7 @@ function LandingPage() {
             <HeroSection />
             <BentoGrid />
             <ComparisonSection />
+            <WhyUsSection />
             <BlogSection />
             <FooterSection />
         </>

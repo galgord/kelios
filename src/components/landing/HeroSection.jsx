@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, MessageSquareText } from 'lucide-react';
+import { trackCTAClick } from '@/lib/analytics';
 
 export default function HeroSection() {
     const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -30,9 +31,9 @@ export default function HeroSection() {
                                 asChild
                                 className="bg-[#FF6B35] hover:bg-[#e55a2b] text-white font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none shadow-[4px_4px_0px_0px_#1a1a1a] hover:shadow-[2px_2px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                             >
-                                <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
+                                <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" onClick={() => trackCTAClick('Get a Free Quote', 'hero')} className="flex items-center justify-center">
                                     <Mail className="mr-2 h-4 w-4" />
-                                    Email Us
+                                    Get a Free Quote
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </a>
                             </Button>
@@ -41,7 +42,7 @@ export default function HeroSection() {
                                 variant="outline"
                                 className="bg-transparent border border-[#1a1a1a] text-[#1a1a1a] font-mono text-sm uppercase tracking-wider px-8 py-6 rounded-none hover:bg-[#1a1a1a] hover:text-white transition-all"
                             >
-                                <a href="sms:+5511999957572" className="flex items-center justify-center">
+                                <a href="sms:+5511999957572" onClick={() => trackCTAClick('Text Us', 'hero')} className="flex items-center justify-center">
                                     <MessageSquareText className="mr-2 h-4 w-4" />
                                     Text Us
                                 </a>

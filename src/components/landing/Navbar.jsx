@@ -79,7 +79,7 @@ export default function Navbar() {
                     >
                         <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center">
                             <Mail className="mr-2 h-4 w-4" />
-                            Email Us
+                            Get a Free Quote
                         </a>
                     </Button>
 
@@ -140,7 +140,7 @@ export default function Navbar() {
                     >
                         <a href="mailto:info@kelios.io?subject=Custom%20internal%20tool%20project" className="flex items-center justify-center">
                             <Mail className="mr-2 h-4 w-4" />
-                            Email Us
+                            Get a Free Quote
                         </a>
                     </Button>
 

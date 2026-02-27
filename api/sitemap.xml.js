@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     // Static pages
     const staticPages = [
         { url: '/', priority: '1.0', changefreq: 'weekly' },
+        { url: '/about', priority: '0.7', changefreq: 'monthly' },
         { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
         { url: '/terms', priority: '0.3', changefreq: 'yearly' },
     ];
